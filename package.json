@@ -1,0 +1,24 @@
+{
+  "name": "testexpress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/index.js",
+    "test-local": "node test/index.js | faucet"
+  },
+  "keywords": [
+    "express"
+  ],
+  "author": "kaishen",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "heapdump": "^0.3.7",
+    "tape": "^4.6.0",
+    "tape-catch": "^1.0.6"
+  },
+  "devDependencies": {
+    "faucet": "0.0.1"
+  }
+}
