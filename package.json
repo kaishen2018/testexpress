@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "node test/index.js",
-    "test-local": "node test/index.js | faucet"
+    "test-local": "node test/index.js | faucet",
+    "test-ci": "tape test/index.js > test.tap"
   },
   "keywords": [
     "express"
@@ -14,11 +15,12 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.14.0",
-    "heapdump": "^0.3.7",
-    "tape": "^4.6.0",
-    "tape-catch": "^1.0.6"
+    "heapdump": "^0.3.7"
   },
   "devDependencies": {
-    "faucet": "0.0.1"
+    "faucet": "0.0.1",
+    "istanbul": "^0.4.5",
+    "tape": "^4.6.0",
+    "tape-catch": "^1.0.6"
   }
 }
