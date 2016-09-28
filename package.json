@@ -6,8 +6,9 @@
   "scripts": {
     "test": "istanbul cover tape \"test/*.js\" ",
     "test-local": " tape \"test/index.js\" | faucet",
-    "ci-lint": "eslint -f checkstyle index.js > checkstyle-result.xml",
-    "ci-test": "istanbul cover tape \"test/*.js\" > test.tap && istanbul report clover"
+    "lint-local": "eslint index.js",
+    "ci-lint": "eslint -f checkstyle index.js -o checkstyle-result.xml",
+    "ci-test": "istanbul cover tape \"test/*.js\"> test.tap && istanbul report clover"
   },
   "keywords": [
     "express"
