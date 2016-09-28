@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node test/index.js",
-    "test-local": "node test/index.js | faucet",
-    "test-ci": "tape test/index.js > test.tap"
+    "test": "istanbul cover tape \"test/*.js\" ",
+    "test-local": " tape \"test/index.js\" | faucet",
+    "ci-lint": "eslint -f checkstyle index.js > checkstyle-result.xml",
+    "ci-test": "istanbul cover tape \"test/*.js\" > test.tap && istanbul report clover"
   },
   "keywords": [
     "express"
@@ -18,6 +19,10 @@
     "heapdump": "^0.3.7"
   },
   "devDependencies": {
+    "eslint": "^3.6.1",
+    "eslint-config-standard": "^6.1.0",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.1",
     "faucet": "0.0.1",
     "istanbul": "^0.4.5",
     "tape": "^4.6.0",

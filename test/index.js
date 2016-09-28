@@ -1,6 +1,6 @@
-var test = require('tape-catch');
+var test = require('tape');
 
-// var app = require('../index.js');
+var app = require('../index.js');
 
 process.on('uncaughtException', err => {
     console.log('uncaughtException');
@@ -22,8 +22,6 @@ test('beep boop', function (t) {
 
 
 test.onFinish(()=> {
-    console.log('------------------------------------------->>>>>>');
-    console.log('finish all test, and quit ');
     process.exit(0)
     }
 );
