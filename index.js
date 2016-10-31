@@ -1,7 +1,7 @@
 var heapdump = require('heapdump')
 var express = require('express')
 var router = express.Router()
-var app = express()
+var app = express();
 
 var theThing = null;
 var replaceThing = function () {

@@ -1,5 +1,4 @@
 var test = require('tape');
-
 var app = require('../index.js');
 
 process.on('uncaughtException', err => {
